@@ -1,4 +1,5 @@
 import aritmetica.Aritmetica;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,6 +12,12 @@ public class AritmeticaTest {
     public void inicio(){
         System.out.println("Método inicio");
         aritmetica= new Aritmetica();
+    }
+
+    @After
+    public void finaliza(){
+        System.out.println("Método finaliza\n");
+        aritmetica=null;
     }
 
     @Test
