@@ -2,7 +2,7 @@ package aritmetica;
 
 public class Aritmetica {
     private float ultimoResultado;
-    
+
     public float suma(float primerSumando, float segundoSumando) {
         return ultimoResultado = primerSumando + segundoSumando;
     }
