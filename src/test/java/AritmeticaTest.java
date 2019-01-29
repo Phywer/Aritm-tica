@@ -10,11 +10,22 @@ public class AritmeticaTest {
         Aritmetica aritmetica = new Aritmetica();
         assertEquals(2,aritmetica.suma(1,1),0);
     }
-    
+
 
     @Test
     public void restatest(){
         Aritmetica aritmerica = new Aritmetica();
         assertEquals(0,aritmerica.resta(1,1),0);
+    }
+
+    @Test
+    public void testMultiplicacion() {
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(6, aritmetica.multiplicacion(2, 3), 0);
+    }
+    @Test
+    public void testDivision() {
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(5, aritmetica.division(10, 2), 0);
     }
 }
