@@ -1,20 +1,18 @@
 import aritmetica.Aritmetica;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class AritmeticaTest {
     private Aritmetica aritmetica;
 
-    @Before
+    @BeforeClass
     public void inicio(){
         System.out.println("Método inicio");
         aritmetica= new Aritmetica();
     }
 
-    @After
+    @AfterClass
     public void finaliza(){
         System.out.println("Método finaliza\n");
         aritmetica=null;
