@@ -4,16 +4,16 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class AritmeticaTest {
-    private Aritmetica aritmetica;
+    private static Aritmetica aritmetica;
 
     @BeforeClass
-    public void inicio(){
+    public static void inicio(){
         System.out.println("Método inicio");
         aritmetica= new Aritmetica();
     }
 
     @AfterClass
-    public void finaliza(){
+    public static void finaliza(){
         System.out.println("Método finaliza\n");
         aritmetica=null;
     }
@@ -40,5 +40,15 @@ public class AritmeticaTest {
     public void testDivision() {
         System.out.println("Método testDivision");
         assertEquals(5, aritmetica.division(10, 2), 0);
+    }
+
+    @Test(expected = ArithmeticException .class)
+    public void divisionPorCero(){
+        //try{
+            System.out.println(1/0);
+            //fail();
+        //}catch (ArithmeticException e){
+
+        //}
     }
 }
